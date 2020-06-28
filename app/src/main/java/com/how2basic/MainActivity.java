@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         setUpToolbar();
         navigationView = (NavigationView) findViewById(R.id.navigation_menu);
+        navigationView.setVisibility(View.GONE);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -103,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout, toolbar,R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+        toolbar.setNavigationIcon(null);
     }
 
     private void getData()
